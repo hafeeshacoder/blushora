@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Enrollments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/manage_enrollment.css">
+</head>
+<body class="page-manage-enrollment">
+<script>(function(){try{if(localStorage.getItem("eduBloomSidebarCollapsed")==="1"){document.documentElement.classList.add("sidebar-collapsed-init");}}catch(e){}})();</script>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app-shell" id="appShell">
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+    <div class="sidebar__head">
+      <a class="logo logo--light" href="admin_dashboard.html" aria-label="Blushora home"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><rect class="mark__bg" width="32" height="32" rx="8"/><path class="mark__stem" d="M16 26V16.5" fill="none" stroke-width="2" stroke-linecap="round"/><path class="mark__leaf" d="M16 16.5c0-4.9 3.5-8.5 9.5-8.5 0 5.5-3.5 8.5-9.5 8.5z"/><path class="mark__leaf mark__leaf--soft" d="M16 20c0-3.8-2.7-6.5-7.8-6.5 0 4.2 2.7 6.5 7.8 6.5z"/></svg></span><span class="logo__word">Blushora</span><span class="logo__tag">Admin</span></a>
+      <button class="icon-btn sidebar__close" type="button" data-nav-close aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <p class="nav-group">Overview</p>
+      <a class="nav-link" href="admin_dashboard.html" title="Dashboard"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span>Dashboard</span></a>
+      <p class="nav-group">Courses</p>
+      <a class="nav-link" href="add_course.html" title="Add Course"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg><span>Add Course</span></a>
+      <a class="nav-link" href="edit_course.html" title="Edit / Delete Courses"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg><span>Edit / Delete Courses</span></a>
+      <p class="nav-group">Students</p>
+      <a class="nav-link is-active" href="manage_enrollment.html" title="Manage Enrollments" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Manage Enrollments</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="icon-btn collapse-toggle" id="collapseToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span>Collapse</span></button>
+      <button id="logoutBtn" class="logout-btn" type="button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg><span>Logout</span></button>
+    </div>
+  </aside>
+  <div class="sidebar-scrim" data-nav-close></div>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="admin_dashboard.html">Dashboard</a></li><li aria-current="page">Manage enrollments</li></ol></nav>
+      <div class="user-chip" data-user-chip data-role="Administrator" hidden>
+        <span class="avatar" data-user-initials aria-hidden="true"></span>
+        <span class="user-chip__text"><span class="user-chip__name" data-user-name></span><span class="user-chip__role" data-user-role>Administrator</span></span>
+      </div>
+    </header>
+
+    <main class="main-content" id="main">
+<div class="page">
+  <header class="page-head">
+    <div class="page-head__text">
+      <h1>Manage Student Enrollments</h1>
+      <p class="page-head__sub">Review, approve, reject, and manage student enrollment requests. All enrollment requests submitted by students will be displayed here.</p>
+    </div>
+  </header>
+
+  <section class="stat-strip" aria-labelledby="summary-title">
+    <h2 class="visually-hidden" id="summary-title">Request summary</h2>
+    <div class="stat stat--brand">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Total Requests</h3>
+        <div class="stat__value" id="totalRequests">0</div>
+      </div>
+    </div>
+    <div class="stat stat--success">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Approved</h3>
+        <div class="stat__value" id="approvedRequests">0</div>
+      </div>
+    </div>
+    <div class="stat stat--warning">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 22h14"></path><path d="M5 2h14"></path><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"></path><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Pending</h3>
+        <div class="stat__value" id="pendingRequests">0</div>
+      </div>
+    </div>
+    <div class="stat stat--danger">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Rejected</h3>
+        <div class="stat__value" id="rejectedRequests">0</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <header class="panel__head panel__head--tools">
+      <h2>Enrollment Requests</h2>
+      <div class="toolbar">
+        <div class="search-field">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <input type="text" id="searchEnrollment" placeholder="Search Enrollment Request..." aria-label="Search enrollment requests">
+        </div>
+        <div class="select-field">
+          <label class="visually-hidden" for="statusFilter">Filter by status</label>
+          <select id="statusFilter">
+            <option value="All">All Requests</option>
+            <option value="Pending">Pending</option>
+            <option value="Approved">Approved</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption class="visually-hidden">Student enrollment requests</caption>
+        <thead>
+          <tr>
+            <th scope="col">Student Name</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Enrollment Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="enrollmentTable"><!-- Enrollment records loaded by JavaScript --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="layout-even">
+    <section class="panel">
+      <header class="panel__head"><h2>Selected Enrollment</h2></header>
+      <div class="panel__body">
+        <div id="selectedEnrollment" class="detail-empty">
+          <h3>No Enrollment Selected</h3>
+          <p>Select an enrollment request from the table above to view complete student and course information.</p>
+          <p>Student details, enrolled course, enrollment date, approval status, and administrator actions will be displayed here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel__head"><h2>Recent Enrollment Activity</h2></header>
+      <div class="panel__body">
+        <div id="activityContainer" class="detail-empty">
+          <h3>No Recent Activity</h3>
+          <p>Recent enrollment activities will appear here after students submit enrollment requests.</p>
+          <p>This section displays newly submitted requests, approved enrollments, rejected enrollments, and other enrollment-related activities.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <header class="panel__head"><h2>Recently Approved Enrollments</h2></header>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Student</th>
+            <th scope="col">Course</th>
+            <th scope="col">Approved By</th>
+            <th scope="col">Approval Date</th>
+          </tr>
+        </thead>
+        <tbody id="approvedTable"><!-- Approved enrollments loaded dynamically --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <header class="panel__head"><h2>Enrollment Summary</h2></header>
+    <div class="panel__body">
+      <div class="summary-grid">
+        <div class="summary-item">
+          <h3>Total Enrollment Requests</h3>
+          <div class="summary-item__value" id="summaryTotal">0</div>
+          <p>Displays the total number of enrollment requests received.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Approved Requests</h3>
+          <div class="summary-item__value" id="summaryApproved">0</div>
+          <p>Shows the number of approved enrollments.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Pending Requests</h3>
+          <div class="summary-item__value" id="summaryPending">0</div>
+          <p>Shows enrollment requests awaiting approval.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Rejected Requests</h3>
+          <div class="summary-item__value" id="summaryRejected">0</div>
+          <p>Shows rejected enrollment requests.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <header class="panel__head">
+      <div>
+        <h2>Remove Student Account</h2>
+        <p class="panel__sub">Permanently delete a student's login and all of their course and enrollment data. This cannot be undone.</p>
+      </div>
+    </header>
+    <div class="panel__body">
+      <div class="field-grid">
+        <div class="field">
+          <label for="removeStudentEmail">Student</label>
+          <select id="removeStudentEmail">
+            <option value="">Select a student…</option>
+          </select>
+        </div>
+      </div>
+      <div class="action-bar action-bar--top">
+        <button id="removeStudentBtn" class="btn btn--danger" type="button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg><span>Remove Student Account</span></button>
+      </div>
+      <p class="muted-note" id="removeStudentStatus"></p>
+    </div>
+  </section>
+</div>
+
+      <footer class="site-footer"><p>© 2026 Blushora | Administrator Panel</p></footer>
+    </main>
+  </div>
+</div>
+<script src="js/manage_enrollment.js"></script>
+<script src="js/admin-students.js"></script>
+<script src="js/shell.js"></script>
+</body>
+</html>

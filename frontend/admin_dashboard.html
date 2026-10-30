@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/admin_dashboard.css">
+</head>
+<body class="page-admin-dashboard">
+<script>(function(){try{if(localStorage.getItem("eduBloomSidebarCollapsed")==="1"){document.documentElement.classList.add("sidebar-collapsed-init");}}catch(e){}})();</script>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app-shell" id="appShell">
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+    <div class="sidebar__head">
+      <a class="logo logo--light" href="admin_dashboard.html" aria-label="Blushora home"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><rect class="mark__bg" width="32" height="32" rx="8"/><path class="mark__stem" d="M16 26V16.5" fill="none" stroke-width="2" stroke-linecap="round"/><path class="mark__leaf" d="M16 16.5c0-4.9 3.5-8.5 9.5-8.5 0 5.5-3.5 8.5-9.5 8.5z"/><path class="mark__leaf mark__leaf--soft" d="M16 20c0-3.8-2.7-6.5-7.8-6.5 0 4.2 2.7 6.5 7.8 6.5z"/></svg></span><span class="logo__word">Blushora</span><span class="logo__tag">Admin</span></a>
+      <button class="icon-btn sidebar__close" type="button" data-nav-close aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <p class="nav-group">Overview</p>
+      <a class="nav-link is-active" href="admin_dashboard.html" title="Dashboard" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span>Dashboard</span></a>
+      <p class="nav-group">Courses</p>
+      <a class="nav-link" href="add_course.html" title="Add Course"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg><span>Add Course</span></a>
+      <a class="nav-link" href="edit_course.html" title="Edit / Delete Courses"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg><span>Edit / Delete Courses</span></a>
+      <p class="nav-group">Students</p>
+      <a class="nav-link" href="manage_enrollment.html" title="Manage Enrollments"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Manage Enrollments</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="icon-btn collapse-toggle" id="collapseToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span>Collapse</span></button>
+      <button id="logoutBtn" class="logout-btn" type="button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg><span>Logout</span></button>
+    </div>
+  </aside>
+  <div class="sidebar-scrim" data-nav-close></div>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li aria-current="page">Dashboard</li></ol></nav>
+      <div class="user-chip" data-user-chip data-role="Administrator" hidden>
+        <span class="avatar" data-user-initials aria-hidden="true"></span>
+        <span class="user-chip__text"><span class="user-chip__name" data-user-name></span><span class="user-chip__role" data-user-role>Administrator</span></span>
+      </div>
+    </header>
+
+    <main class="main-content" id="main">
+<div class="page">
+  <section class="dash-hero">
+    <div class="dash-hero__row">
+      <div class="dash-hero__intro">
+        <span class="avatar avatar--lg avatar--on-dark" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+        <div>
+          <p class="dash-hero__eyebrow">Administrator Panel</p>
+          <h1 class="dash-hero__title">Administrator Dashboard</h1>
+          <p class="dash-hero__sub">Manage courses, student enrollments, reports and academic activities through a centralized administration panel.</p>
+        </div>
+      </div>
+      <div class="dash-hero__actions">
+        <a class="btn btn--primary" href="add_course.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg><span>Add Course</span></a>
+        <a class="btn btn--outline btn--on-dark" href="manage_enrollment.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Manage Enrollments</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stat-strip" aria-labelledby="summary-title">
+    <h2 class="visually-hidden" id="summary-title">Summary</h2>
+    <div class="stat stat--brand">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Total Courses</h3>
+        <div class="stat__value" id="totalCourses">0</div>
+      </div>
+    </div>
+    <div class="stat stat--gold">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Total Students</h3>
+        <div class="stat__value" id="totalStudents">0</div>
+      </div>
+    </div>
+    <div class="stat stat--info">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Total Enrollments</h3>
+        <div class="stat__value" id="totalEnrollments">0</div>
+      </div>
+    </div>
+    <div class="stat stat--accent">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Course Completions</h3>
+        <div class="stat__value" id="courseCompletions">0</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout-main">
+    <div class="stack">
+      <section class="panel">
+        <header class="panel__head">
+          <h2>Course Management</h2>
+          <div class="panel__actions">
+            <a class="btn btn--primary btn--sm" href="add_course.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg><span>Add New Course</span></a>
+            <a class="btn btn--outline btn--sm" href="edit_course.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg><span>Edit / Delete Courses</span></a>
+          </div>
+        </header>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Course Name</th>
+                <th scope="col">Instructor</th>
+                <th scope="col">Level</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="courseTable"><!-- Loaded by admin_dashboard.js --></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel__head">
+          <h2>Student Enrollments</h2>
+          <div class="panel__actions">
+            <a class="btn btn--outline btn--sm" href="manage_enrollment.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Manage Enrollments</span></a>
+          </div>
+        </header>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Student Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody id="enrollmentTable"><!-- Loaded by admin_dashboard.js --></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel__head"><h2>Reports Overview</h2></header>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Report</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Student Performance</td><td>Available</td></tr>
+              <tr><td>Course Completion</td><td>Available</td></tr>
+              <tr><td>Enrollment Summary</td><td>Available</td></tr>
+              <tr><td>Attendance Report</td><td>Available</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel__head"><h2>System Notifications</h2></header>
+        <div class="panel__body" id="notificationContainer">
+          <p class="muted-note">No new notifications available.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="stack">
+      <section class="panel">
+        <header class="panel__head"><h2>Admin Tools</h2></header>
+        <div class="panel__body panel__body--flush">
+          <ul class="tool-list">
+            <li><a class="tool" href="add_course.html"><span class="tool__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg></span><span class="tool__label">Add Course</span><svg class="icon tool__go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"></path></svg></a></li>
+            <li><a class="tool" href="edit_course.html"><span class="tool__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg></span><span class="tool__label">Edit / Delete Courses</span><svg class="icon tool__go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"></path></svg></a></li>
+            <li><a class="tool" href="manage_enrollment.html"><span class="tool__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><span class="tool__label">Manage Enrollments</span><svg class="icon tool__go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"></path></svg></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel__head"><h2>Dashboard Overview</h2></header>
+        <div class="panel__body">
+          <div class="chart-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 240 110" preserveAspectRatio="xMidYMid meet" role="img" focusable="false">
+              <line x1="8" y1="100" x2="232" y2="100" class="cp-axis"/>
+              <line x1="8" y1="60" x2="232" y2="60" class="cp-grid"/>
+              <line x1="8" y1="20" x2="232" y2="20" class="cp-grid"/>
+              <polyline points="14,84 60,66 106,72 152,42 198,50 228,24" class="cp-line"/>
+              <circle cx="14" cy="84" r="3.5" class="cp-dot"/>
+              <circle cx="60" cy="66" r="3.5" class="cp-dot"/>
+              <circle cx="106" cy="72" r="3.5" class="cp-dot"/>
+              <circle cx="152" cy="42" r="3.5" class="cp-dot"/>
+              <circle cx="198" cy="50" r="3.5" class="cp-dot"/>
+              <circle cx="228" cy="24" r="3.5" class="cp-dot cp-dot--hi"/>
+            </svg>
+          </div>
+          <p class="muted-note">Analytics, charts, course statistics, enrollment trends and overall system insights will be displayed here after backend integration.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+      <footer class="site-footer"><p>© 2026 Blushora | Administrator Panel</p></footer>
+    </main>
+  </div>
+</div>
+<script src="js/admin_dashboard.js"></script>
+<script src="js/shell.js"></script>
+</body>
+</html>

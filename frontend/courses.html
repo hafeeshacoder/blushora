@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses - Blushora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/courses.css">
+</head>
+<body class="page-courses">
+<script>(function(){try{if(localStorage.getItem("eduBloomSidebarCollapsed")==="1"){document.documentElement.classList.add("sidebar-collapsed-init");}}catch(e){}})();</script>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app-shell" id="appShell">
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+    <div class="sidebar__head">
+      <a class="logo logo--light" href="student_dashboard.html" aria-label="Blushora home"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><rect class="mark__bg" width="32" height="32" rx="8"/><path class="mark__stem" d="M16 26V16.5" fill="none" stroke-width="2" stroke-linecap="round"/><path class="mark__leaf" d="M16 16.5c0-4.9 3.5-8.5 9.5-8.5 0 5.5-3.5 8.5-9.5 8.5z"/><path class="mark__leaf mark__leaf--soft" d="M16 20c0-3.8-2.7-6.5-7.8-6.5 0 4.2 2.7 6.5 7.8 6.5z"/></svg></span><span class="logo__word">Blushora</span></a>
+      <button class="icon-btn sidebar__close" type="button" data-nav-close aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <p class="nav-group">Overview</p>
+      <a class="nav-link" href="student_dashboard.html" title="Dashboard"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span>Dashboard</span></a>
+      <p class="nav-group">Learning</p>
+      <a class="nav-link is-active" href="courses.html" title="Explore Courses" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path><circle cx="12" cy="12" r="10"></circle></svg><span>Explore Courses</span></a>
+      <a class="nav-link" href="my_courses.html" title="My Courses"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 6 4 14"></path><path d="M12 6v14"></path><path d="M8 8v12"></path><path d="M4 4v16"></path></svg><span>My Courses</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="icon-btn collapse-toggle" id="collapseToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span>Collapse</span></button>
+      <button id="logoutBtn" class="logout-btn" type="button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg><span>Logout</span></button>
+    </div>
+  </aside>
+  <div class="sidebar-scrim" data-nav-close></div>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="student_dashboard.html">Dashboard</a></li><li aria-current="page">Explore courses</li></ol></nav>
+      <div class="user-chip" data-user-chip data-role="Student" hidden>
+        <span class="avatar" data-user-initials aria-hidden="true"></span>
+        <span class="user-chip__text"><span class="user-chip__name" data-user-name></span><span class="user-chip__role" data-user-role>Student</span></span>
+      </div>
+    </header>
+
+    <main class="main-content" id="main">
+<div class="page">
+  <header class="page-head">
+    <div class="page-head__text">
+      <h1>Available Courses</h1>
+      <p class="page-head__sub">Search the catalog, open a course to see what it covers, and enroll when you are ready.</p>
+    </div>
+  </header>
+
+  <section class="catalog" id="courseList" aria-label="Course catalog">
+    <div class="search-field">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <input type="text" id="searchCourse" placeholder="Search Courses..." aria-label="Search courses">
+    </div>
+
+    <div class="cards" id="courseContainer">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+        <h3>Python Programming</h3>
+        <p>Learn Python from beginner to advanced level.</p>
+        <button class="btn viewCourseBtn" data-course="python">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Web Development">
+        <h3>Web Development</h3>
+        <p>Create modern websites using HTML, CSS and JavaScript.</p>
+        <button class="btn viewCourseBtn" data-course="web">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java Programming">
+        <h3>Java Programming</h3>
+        <p>Master Java and object-oriented programming.</p>
+        <button class="btn viewCourseBtn" data-course="java">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Database Management">
+        <h3>Database Management</h3>
+        <p>Learn SQL and MySQL database concepts.</p>
+        <button class="btn viewCourseBtn" data-course="database">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Machine Learning">
+        <h3>Machine Learning</h3>
+        <p>Introduction to AI and predictive models.</p>
+        <button class="btn viewCourseBtn" data-course="machinelearning">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Cyber Security">
+        <h3>Cyber Security</h3>
+        <p>Protect systems against cyber threats.</p>
+        <button class="btn viewCourseBtn" data-course="cybersecurity">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Artificial Intelligence">
+        <h3>Artificial Intelligence</h3>
+        <p>Learn the fundamentals of intelligent systems and AI applications.</p>
+        <button class="btn viewCourseBtn" data-course="artificialintelligence">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4144/4144513.png" alt="Cloud Computing">
+        <h3>Cloud Computing</h3>
+        <p>Learn cloud technologies and deploy scalable applications.</p>
+        <button class="btn viewCourseBtn" data-course="cloudcomputing">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Mobile App Development">
+        <h3>Mobile App Development</h3>
+        <p>Build Android applications with modern user interfaces.</p>
+        <button class="btn viewCourseBtn" data-course="mobiledevelopment">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" alt="DevOps">
+        <h3>DevOps</h3>
+        <p>Master modern software deployment and automation tools.</p>
+        <button class="btn viewCourseBtn" data-course="devops">View Details</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+      <footer class="site-footer"><p>© 2026 Blushora</p></footer>
+    </main>
+  </div>
+</div>
+<script src="js/courses.js"></script>
+<script src="js/shell.js"></script>
+</body>
+</html>

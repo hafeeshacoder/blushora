@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Courses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/my_courses.css">
+</head>
+<body class="page-my-courses">
+<script>(function(){try{if(localStorage.getItem("eduBloomSidebarCollapsed")==="1"){document.documentElement.classList.add("sidebar-collapsed-init");}}catch(e){}})();</script>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app-shell" id="appShell">
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+    <div class="sidebar__head">
+      <a class="logo logo--light" href="student_dashboard.html" aria-label="Blushora home"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><rect class="mark__bg" width="32" height="32" rx="8"/><path class="mark__stem" d="M16 26V16.5" fill="none" stroke-width="2" stroke-linecap="round"/><path class="mark__leaf" d="M16 16.5c0-4.9 3.5-8.5 9.5-8.5 0 5.5-3.5 8.5-9.5 8.5z"/><path class="mark__leaf mark__leaf--soft" d="M16 20c0-3.8-2.7-6.5-7.8-6.5 0 4.2 2.7 6.5 7.8 6.5z"/></svg></span><span class="logo__word">Blushora</span></a>
+      <button class="icon-btn sidebar__close" type="button" data-nav-close aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <p class="nav-group">Overview</p>
+      <a class="nav-link" href="student_dashboard.html" title="Dashboard"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span>Dashboard</span></a>
+      <p class="nav-group">Learning</p>
+      <a class="nav-link" href="courses.html" title="Explore Courses"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path><circle cx="12" cy="12" r="10"></circle></svg><span>Explore Courses</span></a>
+      <a class="nav-link is-active" href="my_courses.html" title="My Courses" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 6 4 14"></path><path d="M12 6v14"></path><path d="M8 8v12"></path><path d="M4 4v16"></path></svg><span>My Courses</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="icon-btn collapse-toggle" id="collapseToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span>Collapse</span></button>
+      <button id="logoutBtn" class="logout-btn" type="button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg><span>Logout</span></button>
+    </div>
+  </aside>
+  <div class="sidebar-scrim" data-nav-close></div>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="student_dashboard.html">Dashboard</a></li><li aria-current="page">My courses</li></ol></nav>
+      <div class="user-chip" data-user-chip data-role="Student" hidden>
+        <span class="avatar" data-user-initials aria-hidden="true"></span>
+        <span class="user-chip__text"><span class="user-chip__name" data-user-name></span><span class="user-chip__role" data-user-role>Student</span></span>
+      </div>
+    </header>
+
+    <main class="main-content" id="main">
+<div class="page">
+  <header class="page-head">
+    <div class="page-head__text">
+      <h1>My Learning Dashboard</h1>
+      <p class="page-head__sub">Welcome to your personalized learning space. Access all your enrolled courses, continue learning, track your progress, complete quizzes, submit assignments and download certificates after successfully finishing each course.</p>
+    </div>
+    <div class="count-chip">
+      <h2 id="totalCourses">0</h2>
+      <p>Enrolled Courses</p>
+    </div>
+  </header>
+
+  <section class="stat-strip" aria-labelledby="summary-title">
+    <h2 class="visually-hidden" id="summary-title">Summary</h2>
+    <div class="stat stat--brand">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Enrolled Courses</h3>
+        <div class="stat__value" id="enrolledCount">0</div>
+      </div>
+    </div>
+    <div class="stat stat--gold">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">In Progress</h3>
+        <div class="stat__value" id="progressCount">0</div>
+      </div>
+    </div>
+    <div class="stat stat--info">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Completed</h3>
+        <div class="stat__value" id="completedCount">0</div>
+      </div>
+    </div>
+    <div class="stat stat--accent">
+      <div class="stat__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div>
+      <div class="stat__body">
+        <h3 class="stat__label">Certificates</h3>
+        <div class="stat__value" id="certificateCount">0</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout-main">
+    <section class="panel">
+      <header class="panel__head"><h2>My Enrolled Courses</h2></header>
+      <div class="panel__body">
+        <div id="courseContainer"><!-- JavaScript will generate enrolled course cards here --></div>
+      </div>
+    </section>
+
+    <div class="stack">
+      <section class="panel">
+        <header class="panel__head">
+          <div>
+            <h2>Overall Learning Progress</h2>
+            <p class="panel__sub">Monitor your learning progress across all enrolled courses.</p>
+          </div>
+        </header>
+        <div class="panel__body">
+          <div class="progress-title">Overall Progress</div>
+          <div class="progress"><div class="progress-fill" id="overallProgress" style="width:0%;"></div></div>
+          <div class="progress-text" id="overallProgressText">0% Completed</div>
+
+          <div class="course-info">
+            <div class="info-box">
+              <h4>Lessons Completed</h4>
+              <p id="lessonCount">0</p>
+            </div>
+            <div class="info-box">
+              <h4>Videos Watched</h4>
+              <p id="videoCount">0</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header class="panel__head"><h2>Recent Activity</h2></header>
+        <div class="panel__body" id="activityContainer">
+          <div class="empty">
+            <h3>No Recent Activity</h3>
+            <p>Your recently watched videos, completed lessons, submitted assignments and quiz attempts will appear here.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+      <footer class="site-footer"><p>© 2026 Blushora | Learn • Practice • Grow</p></footer>
+    </main>
+  </div>
+</div>
+<script src="js/my_courses.js"></script>
+<script src="js/shell.js"></script>
+</body>
+</html>

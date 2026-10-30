@@ -1,0 +1,617 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "courseName": "Python Programming",
+      "courseCode": "CS101",
+      "instructor": "Dr. Anu priya",
+      "duration": "8 Weeks",
+      "level": "Beginner",
+      "category": "Programming",
+      "image": "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
+      "status": "Active",
+      "overview": "Learn Python programming from beginner to advanced level.",
+      "learningOutcomes": [
+        "Understand Python basics",
+        "Work with functions",
+        "Use object-oriented programming",
+        "Build Python applications"
+      ],
+      "modules": [
+        "Python Basics",
+        "Control Statements",
+        "Functions",
+        "OOP",
+        "Mini Project"
+      ],
+      "prerequisites": [
+        "Basic Computer Knowledge",
+        "Internet Access",
+        "No prior programming experience required"
+      ],
+      "videos": [
+        "https://youtu.be/_uQrJ0TkZlc?si=hfC2ZOjcxo9_9mF-",
+        "https://youtu.be/lIId8IDP6TU?si=LwLPR5vCULDv50UL",
+        "https://youtu.be/u-OmVr_fT4s?si=FoLBRt0BIwbeJUAY",
+        "https://youtu.be/Ej_02ICOIgs?si=MK6sxz4Lpj2H9lb2",
+        "https://youtu.be/ONcT716N2_M?si=Ux1Gt9YVlkZhzP9E"
+      ],
+      "materials": [
+        "Python Notes.pdf",
+        "Python Lab Manual.pdf",
+        "Python Reference Book.pdf",
+        "https://docs.python.org/3/",
+        "https://github.com/TheAlgorithms/Python"
+      ],
+      "maxStudents": "100",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "2026-10-01",
+      "endDate": "2026-11-26",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "courseName": "Web Development",
+      "courseCode": "WD101",
+      "instructor": "Dr. Priya",
+      "duration": "10 Weeks",
+      "level": "Intermediate",
+      "category": "Web Development",
+      "image": "https://cdn-icons-png.flaticon.com/512/1006/1006363.png",
+      "status": "Active",
+      "overview": "Learn HTML, CSS and JavaScript for modern web development.",
+      "learningOutcomes": [
+        "Create semantic HTML",
+        "Design responsive websites",
+        "Use JavaScript",
+        "Work with APIs"
+      ],
+      "modules": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "DOM",
+        "REST APIs"
+      ],
+      "prerequisites": [
+        "Basic Computer Knowledge",
+        "Internet Access",
+        "No prior web development experience required"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=mU6anWqZJcc",
+        "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
+        "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+        "https://www.youtube.com/watch?v=Oe421EPjeBE",
+        "https://www.youtube.com/watch?v=cuHDQhDhvPE"
+      ],
+      "materials": [
+        "Web Development Notes.pdf",
+        "HTML CSS JS Lab Manual.pdf",
+        "Web Development Reference Book.pdf",
+        "https://developer.mozilla.org/en-US/docs/Web",
+        "https://www.w3schools.com/"
+      ],
+      "maxStudents": "90",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "2026-10-05",
+      "endDate": "2026-12-14",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "courseName": "Artificial Intelligence",
+      "courseCode": "AI101",
+      "instructor": "Dr. Priya",
+      "duration": "12 Weeks",
+      "level": "Advanced",
+      "category": "Artificial Intelligence",
+      "image": "https://cdn-icons-png.flaticon.com/512/4712/4712027.png",
+      "status": "Active",
+      "overview": "Learn the fundamentals of Artificial Intelligence.",
+      "learningOutcomes": [
+        "Understand AI concepts",
+        "Explore machine learning",
+        "Understand neural networks",
+        "Build AI applications"
+      ],
+      "modules": [
+        "Introduction to AI",
+        "Machine Learning",
+        "Neural Networks",
+        "Generative AI",
+        "AI Project"
+      ],
+      "prerequisites": [
+        "Basic Python knowledge",
+        "Basic mathematics and statistics",
+        "Logical thinking"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=5NgNicANyqM",
+        "https://www.youtube.com/watch?v=i_LwzRVP7bg",
+        "https://www.youtube.com/watch?v=aircAruvnKk",
+        "https://www.youtube.com/watch?v=JMUxmLyrhSk",
+        "https://www.youtube.com/watch?v=doT9tTOZ9YQ"
+      ],
+      "materials": [
+        "AI Fundamentals Notes.pdf",
+        "Machine Learning Lab Manual.pdf",
+        "AI Reference Book.pdf",
+        "https://www.tensorflow.org/resources/learn-ml",
+        "https://scikit-learn.org/stable/"
+      ],
+      "maxStudents": "60",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Approval Required",
+      "startDate": "2026-10-12",
+      "endDate": "2027-01-04",
+      "completed": false
+    },
+    {
+      "instructor": "Dr. Kumar",
+      "duration": "8 Weeks",
+      "level": "Intermediate",
+      "category": "Programming",
+      "image": "https://cdn-icons-png.flaticon.com/512/226/226777.png",
+      "status": "Active",
+      "overview": "Master Java and object-oriented programming through practical examples and projects",
+      "prerequisites": [
+        "Basic Computer Knowledge",
+        "Internet Access",
+        "Basic programming logic"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=eIrMbAQSU34",
+        "https://www.youtube.com/watch?v=grEKMHGYyns",
+        "https://youtu.be/A74TOX803D0",
+        "https://www.youtube.com/watch?v=xk4_1vDrzzo",
+        "https://www.youtube.com/watch?v=xTtL8E4LzTQ"
+      ],
+      "materials": [
+        "Java Notes.pdf",
+        "Java Lab Manual.pdf",
+        "Java Reference.pdf",
+        "https://docs.oracle.com/javase/",
+        "https://www.geeksforgeeks.org/java/"
+      ],
+      "maxStudents": "50",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "2026-10-01",
+      "endDate": "2026-11-26",
+      "completed": false,
+      "courseName": "Java Programming",
+      "courseCode": "JV101",
+      "learningOutcomes": [
+        "Understand Java fundamentals",
+        "Apply object-oriented concepts",
+        "Work with collections and exceptions",
+        "Build console-based applications",
+        "Prepare for Java certification"
+      ],
+      "modules": [
+        "Java Basics",
+        "OOP Concepts",
+        "Collections",
+        "Exception Handling",
+        "Mini Project"
+      ],
+      "id": "6U8svDN"
+    },
+    {
+      "instructor": "Prof. Meena",
+      "duration": "6 Weeks",
+      "level": "Beginner",
+      "category": "Database",
+      "image": "https://cdn-icons-png.flaticon.com/512/2906/2906274.png",
+      "status": "Active",
+      "overview": "Learn how to design, create and query relational databases using SQL, with hands-on exercises and a small project.",
+      "prerequisites": [
+        "Basic Computer Knowledge",
+        "Logical thinking",
+        "No prior database experience required"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+        "https://www.youtube.com/watch?v=ztHopE5Wnpc",
+        "https://www.youtube.com/watch?v=FR4QIeZaPeM",
+        "https://www.youtube.com/watch?v=9Pzj7Aj25lw",
+        "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+      ],
+      "materials": [
+        "DBMS Notes.pdf",
+        "SQL Lab Manual.pdf",
+        "Database System Concepts.pdf",
+        "https://www.w3schools.com/sql/",
+        "https://www.postgresql.org/docs/"
+      ],
+      "maxStudents": "60",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "2026-10-05",
+      "endDate": "2026-11-16",
+      "completed": false,
+      "courseName": "Database Management Systems",
+      "courseCode": "DB101",
+      "learningOutcomes": [
+        "Understand database concepts",
+        "Design tables using ER diagrams",
+        "Write SQL queries",
+        "Apply normalization",
+        "Manage data with joins and constraints"
+      ],
+      "modules": [
+        "Introduction to DBMS",
+        "ER Modeling and Normalization",
+        "SQL Basics",
+        "Joins and Subqueries",
+        "Mini Project"
+      ],
+      "id": "FQgpi53"
+    },
+    {
+      "id": "7",
+      "courseName": "Cloud Computing Essentials",
+      "courseCode": "CC101",
+      "instructor": "Mr. Arjun",
+      "duration": "10 Weeks",
+      "level": "Intermediate",
+      "category": "Cloud Computing",
+      "image": "https://cdn-icons-png.flaticon.com/512/606/606796.png",
+      "status": "Active",
+      "overview": "Learn cloud fundamentals and deploy applications using popular cloud platforms.",
+      "learningOutcomes": [
+        "Understand cloud service models",
+        "Deploy virtual machines",
+        "Work with cloud storage",
+        "Set up basic networking",
+        "Understand cloud security basics"
+      ],
+      "modules": [
+        "Cloud Basics",
+        "Virtual Machines",
+        "Storage Services",
+        "Networking",
+        "Mini Project"
+      ],
+      "prerequisites": [
+        "Basic Computer Knowledge",
+        "Internet Access",
+        "Basic networking knowledge"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=M988_fsOSWo",
+        "https://www.youtube.com/watch?v=2LaAJq1lB1Q",
+        "https://www.youtube.com/watch?v=3hLmDS179YE",
+        "https://www.youtube.com/watch?v=NIg_zXNVdBg",
+        "https://www.youtube.com/watch?v=RWLPGxwiXBI"
+      ],
+      "materials": [
+        "Cloud Computing Notes.pdf",
+        "Cloud Lab Manual.pdf",
+        "Cloud Computing Reference.pdf",
+        "https://aws.amazon.com/getting-started/",
+        "https://docs.microsoft.com/en-us/azure/"
+      ],
+      "maxStudents": "80",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "2026-10-10",
+      "endDate": "2026-12-19",
+      "completed": false
+    },
+    {
+      "id": "8",
+      "courseName": "Cyber Security Fundamentals",
+      "courseCode": "CY101",
+      "instructor": "Ms. Divya",
+      "duration": "8 Weeks",
+      "level": "Beginner",
+      "category": "Cyber Security",
+      "image": "https://cdn-icons-png.flaticon.com/512/2913/2913133.png",
+      "status": "Draft",
+      "overview": "Understand common security threats and how to protect systems and data.",
+      "learningOutcomes": [
+        "Identify common cyber threats",
+        "Understand network security basics",
+        "Apply safe browsing practices",
+        "Understand encryption basics",
+        "Respond to basic security incidents"
+      ],
+      "modules": [
+        "Introduction to Cyber Security",
+        "Network Security",
+        "Encryption Basics",
+        "Threats and Attacks",
+        "Incident Response"
+      ],
+      "prerequisites": [
+        "Basic Computer Knowledge",
+        "Basic networking knowledge",
+        "No prior security experience required"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=inWWhr5tnEA",
+        "https://youtu.be/n7cjd5E_nsc?si=K3cnuIa1PncjrJoJ",
+        "https://youtu.be/o_g-M7UBqI8?si=xNdaOE4mT5Yr_iWU",
+        "https://youtu.be/awhqnSskWjU?si=bxHYTZeELDEutc82",
+        "https://youtu.be/9X069Ez_hFg?si=FV5Gak6YCUjS2JSZ"
+      ],
+      "materials": [
+        "Cyber Security Notes.pdf",
+        "Cyber Security Lab Manual.pdf",
+        "Cyber Security Reference.pdf",
+        "https://owasp.org/www-project-top-ten/",
+        "https://www.cisa.gov/"
+      ],
+      "maxStudents": "50",
+      "language": "English",
+      "certificate": "No",
+      "enrollmentType": "Approval Required",
+      "startDate": "2026-10-15",
+      "endDate": "2026-12-10",
+      "completed": false
+    },
+    {
+      "id": "9",
+      "courseName": "Mobile App Development with Flutter",
+      "courseCode": "MB101",
+      "instructor": "Dr. Anu",
+      "duration": "12 Weeks",
+      "level": "Advanced",
+      "category": "Mobile App Development",
+      "image": "https://cdn-icons-png.flaticon.com/512/2965/2965300.png",
+      "status": "Active",
+      "overview": "Build cross-platform mobile apps using Flutter and Dart, from UI design to deployment.",
+      "learningOutcomes": [
+        "Understand Flutter widgets",
+        "Build responsive UIs",
+        "Manage app state",
+        "Connect apps to APIs",
+        "Publish an app"
+      ],
+      "modules": [
+        "Dart Basics",
+        "Flutter Widgets",
+        "State Management",
+        "APIs and Networking",
+        "Final Project"
+      ],
+      "prerequisites": [
+        "Basic programming knowledge",
+        "Object-oriented programming basics",
+        "Basic Computer Knowledge"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=1ukSR1GRtMU",
+        "https://www.youtube.com/watch?v=x0uinJvhNxI",
+        "https://www.youtube.com/watch?v=CD1Y2DmL5JM",
+        "https://www.youtube.com/watch?v=VPvVD8t02U8",
+        "https://www.youtube.com/watch?v=pTJJsmejUOQ"
+      ],
+      "materials": [
+        "Flutter Notes.pdf",
+        "Flutter Lab Manual.pdf",
+        "Flutter Reference Book.pdf",
+        "https://docs.flutter.dev/",
+        "https://dart.dev/guides"
+      ],
+      "maxStudents": "40",
+      "language": "Hindi",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "2026-10-20",
+      "endDate": "2027-01-12",
+      "completed": false
+    },
+    {
+      "id": "10",
+      "courseName": "DevOps Fundamentals",
+      "courseCode": "DO101",
+      "instructor": "Prof. Meena",
+      "duration": "9 Weeks",
+      "level": "Intermediate",
+      "category": "DevOps",
+      "image": "https://cdn-icons-png.flaticon.com/512/919/919851.png",
+      "status": "Active",
+      "overview": "Learn CI/CD, containerization and automation practices used in modern software delivery.",
+      "learningOutcomes": [
+        "Understand CI/CD pipelines",
+        "Use Docker containers",
+        "Automate builds and deployments",
+        "Understand version control workflows",
+        "Monitor applications in production"
+      ],
+      "modules": [
+        "DevOps Overview",
+        "Version Control",
+        "Docker Basics",
+        "CI/CD Pipelines",
+        "Monitoring"
+      ],
+      "prerequisites": [
+        "Basic Linux commands",
+        "Basic Git knowledge",
+        "Basic Computer Knowledge"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=Xrgk023l4lI",
+        "https://www.youtube.com/watch?v=9pZ2xmsSDdo",
+        "https://www.youtube.com/watch?v=3c-iBn73dDE",
+        "https://www.youtube.com/watch?v=j5Zsa_eOXeY",
+        "https://www.youtube.com/watch?v=1a7Ktvh8AS0"
+      ],
+      "materials": [
+        "DevOps Notes.pdf",
+        "DevOps Lab Manual.pdf",
+        "DevOps Reference Book.pdf",
+        "https://docs.docker.com/get-started/",
+        "https://kubernetes.io/docs/home/"
+      ],
+      "maxStudents": "70",
+      "language": "Tamil",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "2026-10-08",
+      "endDate": "2026-12-10",
+      "completed": false
+    },
+    {
+      "instructor": "Mr. Arjun",
+      "duration": "10 Weeks",
+      "level": "Intermediate",
+      "category": "Programming",
+      "image": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+      "status": "Active",
+      "overview": "Learn core data structures and algorithms used to write efficient, interview-ready code.",
+      "prerequisites": [
+        "Basic programming knowledge",
+        "Basic Computer Knowledge",
+        "Logical thinking"
+      ],
+      "videos": [
+        "https://www.youtube.com/watch?v=RBSGKlAvoiM",
+        "https://www.youtube.com/watch?v=8hly31xKli0",
+        "",
+        "",
+        ""
+      ],
+      "materials": [
+        "DSA Notes.pdf",
+        "DSA Practice Problems.pdf",
+        "Introduction to Algorithms.pdf",
+        "https://www.geeksforgeeks.org/data-structures/"
+      ],
+      "maxStudents": "75",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "2026-10-12",
+      "endDate": "2026-12-20",
+      "completed": false,
+      "courseName": "Data Structures and Algorithms",
+      "courseCode": "DSA101",
+      "learningOutcomes": [
+        "Understand arrays and linked lists",
+        "Use stacks, queues and trees",
+        "Apply sorting and searching algorithms",
+        "Analyze time and space complexity",
+        "Solve coding interview problems"
+      ],
+      "modules": [
+        "Arrays and Linked Lists",
+        "Stacks and Queues",
+        "Trees and Graphs",
+        "Sorting and Searching",
+        "Practice Problems"
+      ],
+      "id": "rtSkb_H"
+    },
+    {
+      "instructor": "Dr. Anu",
+      "duration": "8 Weeks",
+      "level": "Beginner",
+      "category": "Web Development",
+      "image": "",
+      "status": "Active",
+      "overview": "",
+      "prerequisites": [
+        "",
+        "",
+        ""
+      ],
+      "videos": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "materials": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "maxStudents": "",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "",
+      "endDate": "",
+      "completed": false,
+      "courseName": "React Development",
+      "courseCode": "REACT101",
+      "learningOutcomes": [],
+      "modules": [],
+      "id": "0jA-Wfe"
+    },
+    {
+      "instructor": "Ramya",
+      "duration": "10 Weeks",
+      "level": "Beginner",
+      "category": "Artificial Intelligence",
+      "image": "https://cdn-icons-png.flaticon.com/512/226/226777.png",
+      "status": "Active",
+      "overview": "",
+      "prerequisites": [
+        "",
+        "",
+        ""
+      ],
+      "videos": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "materials": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "maxStudents": "",
+      "language": "English",
+      "certificate": "Yes",
+      "enrollmentType": "Open",
+      "startDate": "",
+      "endDate": "",
+      "completed": false,
+      "courseName": "Data Structures and Algorithms",
+      "courseCode": "DB101",
+      "learningOutcomes": [],
+      "modules": [],
+      "id": "ONzn5iA"
+    }
+  ],
+  "students": [],
+  "admins": [],
+  "enrollments": [
+    {
+      "student": "Rickshitha A",
+      "studentEmail": "rickshithaanandakumar@gmail.com",
+      "title": "Database Management Systems",
+      "course": "Database Management Systems",
+      "courseKey": "FQgpi53",
+      "enrollDate": "10/10/2026",
+      "status": "Pending",
+      "completed": false,
+      "id": 1
+    }
+  ],
+  "progress": [],
+  "sessions": [],
+  "draftCourses": [],
+  "appState": []
+}

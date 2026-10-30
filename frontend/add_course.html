@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/add_course.css">
+</head>
+<body class="page-add-course">
+<script>(function(){try{if(localStorage.getItem("eduBloomSidebarCollapsed")==="1"){document.documentElement.classList.add("sidebar-collapsed-init");}}catch(e){}})();</script>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app-shell" id="appShell">
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+    <div class="sidebar__head">
+      <a class="logo logo--light" href="admin_dashboard.html" aria-label="Blushora home"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><rect class="mark__bg" width="32" height="32" rx="8"/><path class="mark__stem" d="M16 26V16.5" fill="none" stroke-width="2" stroke-linecap="round"/><path class="mark__leaf" d="M16 16.5c0-4.9 3.5-8.5 9.5-8.5 0 5.5-3.5 8.5-9.5 8.5z"/><path class="mark__leaf mark__leaf--soft" d="M16 20c0-3.8-2.7-6.5-7.8-6.5 0 4.2 2.7 6.5 7.8 6.5z"/></svg></span><span class="logo__word">Blushora</span><span class="logo__tag">Admin</span></a>
+      <button class="icon-btn sidebar__close" type="button" data-nav-close aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <p class="nav-group">Overview</p>
+      <a class="nav-link" href="admin_dashboard.html" title="Dashboard"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span>Dashboard</span></a>
+      <p class="nav-group">Courses</p>
+      <a class="nav-link is-active" href="add_course.html" title="Add Course" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg><span>Add Course</span></a>
+      <a class="nav-link" href="edit_course.html" title="Edit / Delete Courses"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg><span>Edit / Delete Courses</span></a>
+      <p class="nav-group">Students</p>
+      <a class="nav-link" href="manage_enrollment.html" title="Manage Enrollments"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Manage Enrollments</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="icon-btn collapse-toggle" id="collapseToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span>Collapse</span></button>
+      <button id="logoutBtn" class="logout-btn" type="button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></svg><span>Logout</span></button>
+    </div>
+  </aside>
+  <div class="sidebar-scrim" data-nav-close></div>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="admin_dashboard.html">Dashboard</a></li><li aria-current="page">Add course</li></ol></nav>
+      <div class="user-chip" data-user-chip data-role="Administrator" hidden>
+        <span class="avatar" data-user-initials aria-hidden="true"></span>
+        <span class="user-chip__text"><span class="user-chip__name" data-user-name></span><span class="user-chip__role" data-user-role>Administrator</span></span>
+      </div>
+    </header>
+
+    <main class="main-content" id="main">
+<div class="page page--form">
+  <header class="page-head">
+    <div class="page-head__text">
+      <h1>Add New Course</h1>
+      <p class="page-head__sub">Create a new course by entering all the required information. The course will be available for students after publishing.</p>
+    </div>
+  </header>
+
+  <div class="form-layout">
+  <div class="form-main">
+    <section class="panel">
+      <header class="panel__head">
+        <div>
+          <h2>Course Information</h2>
+        </div>
+      </header>
+      <div class="panel__body">
+        <div class="field-grid">
+          <div class="field">
+            <label for="courseName">Course Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" placeholder="Enter Course Name" id="courseName" aria-required="true">
+          </div>
+          <div class="field">
+            <label for="courseCode">Course Code <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" placeholder="Example: CS101" id="courseCode" aria-required="true">
+          </div>
+          <div class="field">
+            <label for="instructor">Instructor Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" placeholder="Enter Instructor Name" id="instructor" aria-required="true">
+          </div>
+          <div class="field">
+            <label for="duration">Duration</label>
+            <input type="text" placeholder="Example: 8 Weeks" id="duration">
+          </div>
+          <div class="field">
+            <label for="level">Course Level</label>
+            <select id="level">
+              <option>Select Level</option>
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="category">Category</label>
+            <select id="category">
+              <option>Select Category</option>
+              <option>Programming</option>
+              <option>Web Development</option>
+              <option>Database</option>
+              <option>Artificial Intelligence</option>
+              <option>Machine Learning</option>
+              <option>Cloud Computing</option>
+              <option>Cyber Security</option>
+              <option>Mobile App Development</option>
+              <option>DevOps</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="image">Course Image URL</label>
+            <input type="text" placeholder="Paste Image URL" id="image">
+          </div>
+          <div class="field">
+            <label for="status">Status</label>
+            <select id="status">
+              <option>Active</option>
+              <option>Draft</option>
+              <option>Inactive</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel__head"><h2>Course Description</h2></header>
+      <div class="panel__body">
+        <div class="field">
+          <label for="overview">Course Overview</label>
+          <textarea placeholder="Enter a detailed overview of the course, its objectives, learning approach and expected outcomes." id="overview" rows="6"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel__head">
+        <div>
+          <h2>Learning Outcomes</h2>
+        </div>
+      </header>
+      <div class="panel__body">
+        <div class="field-grid">
+          <div class="field">
+            <label for="outcome">Outcome 1</label>
+            <input type="text" placeholder="Example: Understand programming fundamentals" id="outcome">
+          </div>
+          <div class="field">
+            <label for="outcome2">Outcome 2</label>
+            <input type="text" placeholder="Example: Build real-world applications" id="outcome2">
+          </div>
+          <div class="field">
+            <label for="outcome3">Outcome 3</label>
+            <input type="text" placeholder="Example: Develop problem-solving skills" id="outcome3">
+          </div>
+          <div class="field">
+            <label for="outcome4">Outcome 4</label>
+            <input type="text" placeholder="Example: Work with industry tools" id="outcome4">
+          </div>
+          <div class="field">
+            <label for="outcome5">Outcome 5</label>
+            <input type="text" placeholder="Example: Prepare for certification" id="outcome5">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel__head">
+        <div>
+          <h2>Course Prerequisites</h2>
+        </div>
+      </header>
+      <div class="panel__body">
+        <div class="field-grid">
+          <div class="field">
+            <label for="prerequistite1">Prerequisite 1</label>
+            <input type="text" placeholder="Example: Basic Computer Knowledge" id="prerequistite1">
+          </div>
+          <div class="field">
+            <label for="prerequisite2">Prerequisite 2</label>
+            <input type="text" placeholder="Example: Internet Access" id="prerequisite2">
+          </div>
+          <div class="field">
+            <label for="prerequisite3">Prerequisite 3</label>
+            <input type="text" placeholder="Example: No prior programming experience required" id="prerequisite3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel__head">
+        <div>
+          <h2>Course Syllabus</h2>
+        </div>
+      </header>
+      <div class="panel__body">
+        <div class="field-grid">
+          <div class="field">
+            <label for="module1">Module 1</label>
+            <input type="text" placeholder="Introduction and Course Overview" id="module1">
+          </div>
+          <div class="field">
+            <label for="module2">Module 2</label>
+            <input type="text" placeholder="Core Concepts" id="module2">
+          </div>
+          <div class="field">
+            <label for="module3">Module 3</label>
+            <input type="text" placeholder="Practical Sessions" id="module3">
+          </div>
+          <div class="field">
+            <label for="module4">Module 4</label>
+            <input type="text" placeholder="Mini Project" id="module4">
+          </div>
+          <div class="field">
+            <label for="module5">Module 5</label>
+            <input type="text" placeholder="Assessment and Certification" id="module5">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel__head">
+        <div>
+          <h2>Video Lessons</h2>
+        </div>
+      </header>
+      <div class="panel__body">
+        <div class="field-grid">
+          <div class="field">
+            <label for="v1">Video Lesson 1</label>
+            <input type="url" placeholder="https://www.youtube.com/watch?v=..." id="v1">
+          </div>
+          <div class="field">
+            <label for="v2">Video Lesson 2</label>
+            <input type="url" placeholder="https://www.youtube.com/watch?v=..." id="v2">
+          </div>
+          <div class="field">
+            <label for="v3">Video Lesson 3</label>
+            <input type="url" placeholder="https://www.youtube.com/watch?v=..." id="v3">
+          </div>
+          <div class="field">
+            <label for="v4">Video Lesson 4</label>
+            <input type="url" placeholder="https://www.youtube.com/watch?v=..." id="v4">
+          </div>
+          <div class="field">
+            <label for="v5">Video Lesson 5</label>
+            <input type="url" placeholder="https://www.youtube.com/watch?v=..." id="v5">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel__head">
+        <div>
+          <h2>Course Materials</h2>
+        </div>
+      </header>
+      <div class="panel__body">
+        <div class="field-grid">
+          <div class="field">
+            <label for="l1">Lecture Notes (PDF)</label>
+            <input type="text" placeholder="Python Notes.pdf" id="l1">
+          </div>
+          <div class="field">
+            <label for="lab">Lab Manual</label>
+            <input type="text" placeholder="Python Lab Manual.pdf" id="lab">
+          </div>
+          <div class="field">
+            <label for="reference">Reference Book</label>
+            <input type="text" placeholder="Programming Reference.pdf" id="reference">
+          </div>
+          <div class="field">
+            <label for="additional">Additional Resources</label>
+            <input type="text" placeholder="GitHub / Documentation / Website" id="additional">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header class="panel__head">
+        <div>
+          <h2>Course Settings</h2>
+        </div>
+      </header>
+      <div class="panel__body">
+        <div class="field-grid">
+          <div class="field">
+            <label for="maxstudents">Maximum Students</label>
+            <input type="number" placeholder="100" id="maxstudents">
+          </div>
+          <div class="field">
+            <label for="courselanguage">Course Language</label>
+            <select id="courselanguage">
+              <option>English</option>
+              <option>Tamil</option>
+              <option>Hindi</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="certificateavailability">Certificate Available</label>
+            <select id="certificateavailability">
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="enrollmenttype">Enrollment Type</label>
+            <select id="enrollmenttype">
+              <option>Open</option>
+              <option>Approval Required</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sd">Course Start Date</label>
+            <input type="date" placeholder="" id="sd">
+          </div>
+          <div class="field">
+            <label for="ed">Course End Date</label>
+            <input type="date" placeholder="" id="ed">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <aside class="form-rail" aria-label="Preview and actions">
+    <section class="panel rail-card">
+      <h2 class="rail-card__title">Course Preview</h2>
+      <div class="preview-frame">
+        <img src="https://picsum.photos/900/350" id="previewImage" alt="Course preview">
+      </div>
+      <p class="muted-note">The selected course image will appear here after backend integration.</p>
+      <div class="rail-card__actions">
+        <button id="publishBtn" class="btn btn--primary btn--lg btn--block" type="button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path><path d="M7 3v4a1 1 0 0 0 1 1h7"></path></svg><span>Publish Course</span></button>
+        <button id="draftBtn" class="btn btn--outline btn--block" type="button">Save Draft</button>
+        <button type="reset" id="resetBtn" class="btn btn--ghost btn--block"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg><span>Reset</span></button>
+        <a class="btn btn--ghost btn--block" href="admin_dashboard.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>Back</span></a>
+      </div>
+    </section>
+  </aside>
+  </div>
+</div>
+
+      <footer class="site-footer"><p>© 2026 Blushora | Administrator Panel</p></footer>
+    </main>
+  </div>
+</div>
+<script src="js/add_course.js"></script>
+<script src="js/shell.js"></script>
+</body>
+</html>

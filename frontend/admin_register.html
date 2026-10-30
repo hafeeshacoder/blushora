@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administrator Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/admin_register.css">
+</head>
+<body class="page-admin-register">
+<script>(function(){try{if(localStorage.getItem("eduBloomSidebarCollapsed")==="1"){document.documentElement.classList.add("sidebar-collapsed-init");}}catch(e){}})();</script>
+<div class="auth">
+<aside class="auth__brand">
+  <a class="logo logo--light" href="index.html" aria-label="Blushora home"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><rect class="mark__bg" width="32" height="32" rx="8"/><path class="mark__stem" d="M16 26V16.5" fill="none" stroke-width="2" stroke-linecap="round"/><path class="mark__leaf" d="M16 16.5c0-4.9 3.5-8.5 9.5-8.5 0 5.5-3.5 8.5-9.5 8.5z"/><path class="mark__leaf mark__leaf--soft" d="M16 20c0-3.8-2.7-6.5-7.8-6.5 0 4.2 2.7 6.5 7.8 6.5z"/></svg></span><span class="logo__word">Blushora</span></a>
+  <div class="auth__pitch">
+    <p class="auth__tagline">Learn, Grow, Achieve</p>
+    <ul class="auth__points">
+      <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg><span>Browse and enroll in available courses</span></li>
+      <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg><span>Track completed and pending modules</span></li>
+      <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg><span>Download a certificate when you finish</span></li>
+    </ul>
+  </div>
+  <svg class="auth__leaf" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><path d="M100 196V104" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M100 104C100 48 142 8 198 8 198 68 156 104 100 104Z" fill="currentColor"/><path d="M100 140C100 96 66 62 10 62 10 110 44 140 100 140Z" fill="currentColor" fill-opacity=".6"/></svg>
+</aside>
+<main class="auth__panel" id="main">
+  <div class="auth__card auth__card--wide">
+    <a href="index.html" class="back-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>Back to Home</span></a>
+
+    <p class="auth__crumb">Login Portal</p>
+    <h1 class="auth__title">Administrator Registration</h1>
+
+    <form id="adminRegisterForm">
+      <div class="field-grid">
+        <div class="field">
+          <label for="adminName">Administrator Name</label>
+          <input type="text" placeholder="Enter Full Name" id="adminName" required autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="adminId">Administrator ID</label>
+          <input type="text" placeholder="Enter Administrator ID" id="adminId" required>
+        </div>
+
+        <div class="field">
+          <label for="adminEmail">Email Address</label>
+          <input type="email" placeholder="Enter Email" id="adminEmail" required autocomplete="email">
+        </div>
+
+        <div class="field">
+          <label for="designation">Designation</label>
+          <select id="designation" required>
+            <option value="">Select Designation</option>
+            <option>Principal</option>
+            <option>Head of Department (HOD)</option>
+            <option>Faculty</option>
+            <option>Course Coordinator</option>
+            <option>System Administrator</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="adminPassword">Password</label>
+          <input type="password" placeholder="Create Password" id="adminPassword" required autocomplete="new-password">
+        </div>
+
+        <div class="field">
+          <label for="adminConfirmPassword">Confirm Password</label>
+          <input type="password" placeholder="Confirm Password" id="adminConfirmPassword" required autocomplete="new-password">
+        </div>
+      </div>
+
+      <button type="submit" id="adminBtn" class="btn btn--primary btn--lg btn--block">Register</button>
+    </form>
+
+    <p class="auth__alt">Already have an account? <a class="text-link" href="login.html">Login Here</a></p>
+  </div>
+</main>
+</div>
+<script src="js/admin_register.js"></script>
+<script src="js/shell.js"></script>
+</body>
+</html>
